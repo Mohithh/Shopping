@@ -1,27 +1,27 @@
-"use client";
+// "use client";
 
 
-import React from 'react'
-import { IoIosCloseCircleOutline } from "react-icons/io";
+// import React from 'react'
+// import { IoIosCloseCircleOutline } from "react-icons/io";
 
 
-const page = () => {
-  return (
-    <div className=' flex  flex-row md:flex-col mx-2 my-2 p-2'>
+// const page = () => {
+//   return (
+//     <div className=' flex  flex-row md:flex-col mx-2 my-2 p-2'>
 
-      <button className='bg-green-700 m-5 p-5'>first </button>
-      <IoIosCloseCircleOutline className='text-5xl' />
+//       <button className='bg-green-700 m-5 p-5'>first </button>
+//       <IoIosCloseCircleOutline className='text-5xl' />
 
 
-      <button className='bg-green-700 m-5 p-5'>second</button>
+//       <button className='bg-green-700 m-5 p-5'>second</button>
 
 
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default page
+// export default page
 
 
 

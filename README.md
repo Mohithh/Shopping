@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Shopping - E-Commerce Website
+This is a full-stack e-commerce website built with Next.js for the frontend and Node.js with MongoDB for the backend. The application provides a responsive and modern shopping experience, including features like product listing, cart management, user authentication, order placement, and order history.
 
-## Getting Started
+Features
+Responsive Design: Optimized for desktops, tablets, and mobile devices.
 
-First, run the development server:
+User Authentication: Sign up and log in functionality using JWT for secure authentication.
 
-```bash
+Product Management: View product details, categories, and prices.
+
+Shopping Cart: Add products to the cart, modify quantities, and proceed to checkout.
+
+Order Management: View past orders, track order statuses, and check delivery details.
+
+Checkout: Provide delivery information and complete the purchase.
+
+Admin Panel (if applicable): Admins can manage products, users, and orders.
+
+Tech Stack
+Frontend: Next.js, React, Tailwind CSS (or custom CSS)
+
+Backend: Node.js, Express
+
+Database: MongoDB, Mongoose
+
+Authentication: JWT (JSON Web Tokens)
+
+File Uploads: Multer (for image/file uploads)
+
+Payment Gateway (Optional): Stripe/PayPal (if integrated)
+
+Installation
+1. Clone the repository:
+bash
+Copy
+Edit
+git clone https://github.com/Mohithh/Shopping.git
+cd Shopping
+2. Install dependencies:
+Run the following command to install the required dependencies:
+
+bash
+Copy
+Edit
+npm install
+3. Set up environment variables:
+Create a .env file in the root of the project and add the necessary environment variables:
+
+bash
+Copy
+Edit
+MONGO_URI=your-mongodb-uri
+JWT_SECRET=your-jwt-secret
+PORT=your-server-port
+4. Run the application locally:
+For development, use:
+
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The application will be accessible at http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+API Endpoints
+User Authentication:
+POST /api/auth/register: Register a new user.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+POST /api/auth/login: Log in and receive a JWT token.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Products:
+GET /api/products: Get all products.
 
-## Learn More
+GET /api/products/:id: Get details of a specific product.
 
-To learn more about Next.js, take a look at the following resources:
+Cart:
+POST /api/cart: Add an item to the cart.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+GET /api/cart: View the cart.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+DELETE /api/cart/:id: Remove an item from the cart.
 
-## Deploy on Vercel
+Orders:
+POST /api/orders: Place a new order.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+GET /api/orders: View the user's order history.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+GET /api/orders/:id: Get details of a specific order.
+
+Usage
+Frontend: Users can browse products, add them to the cart, and complete their purchase via a checkout process.
+
+Backend: Handles all API requests related to user management, product catalog, shopping cart, and order history.
+
+Deployment
+To deploy your application:
+
+Frontend: Deploy the frontend on platforms like Vercel.
+
+Backend: Deploy the backend on platforms like Heroku or DigitalOcean.
+
+Contributing
+Fork the repository.
+
+Create a new branch (git checkout -b feature-branch).
+
+Commit your changes (git commit -am 'Add new feature').
+
+Push to your branch (git push origin feature-branch).
+
+Open a pull request.
